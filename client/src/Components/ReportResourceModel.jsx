@@ -37,7 +37,7 @@ export const ReportResourceModel = ({ show, onClose }) => {
         try {
           // 3. Send the data to a NEW PUBLIC backend endpoint
           // IMPORTANT: This should be a public, unauthenticated route
-          await axios.post('http://localhost:3000/api/resources', resourceData);
+          await axios.post('https://relief-net-api.onrender.com/api/resources', resourceData);
           
           setMessage('✅ Resource reported successfully! It will be reviewed by an admin.');
           

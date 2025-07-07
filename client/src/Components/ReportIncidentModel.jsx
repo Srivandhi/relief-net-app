@@ -25,7 +25,7 @@ export const ReportIncidentModel = ({ show, onClose }) => {
         };
 
         try {
-          const response = await axios.post('http://localhost:3000/api/incidents', incidentData);
+          const response = await axios.post('https://relief-net-api.onrender.com/api/incidents', incidentData);
           setMessage('✅ Report submitted successfully!');
           
          

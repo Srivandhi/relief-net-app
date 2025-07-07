@@ -111,7 +111,7 @@ export const Map = ({ children }) => {
 
         const fetchIncidents = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/incidents');
+                const response = await axios.get('https://relief-net-api.onrender.com/api/incidents');
                 setIncidents(response.data);
                 console.log('Fetched incidents:', response.data);
             } catch (error) {
@@ -120,7 +120,7 @@ export const Map = ({ children }) => {
         };
         const fetchResources = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/resources');
+                const response = await axios.get('https://relief-net-api.onrender.com/api/resources');
                 setResources(response.data);
                 console.log('Fetched resources:', response.data);
             } catch (error) {

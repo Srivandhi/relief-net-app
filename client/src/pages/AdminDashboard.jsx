@@ -69,8 +69,8 @@ export const AdminDashboard = () => {
 
             try {
                 const [incidentsRes, resourcesRes] = await Promise.all([
-                    axios.get('http://localhost:3000/api/admin/incidents/unverified', config),
-                    axios.get('http://localhost:3000/api/admin/resources/unverified', config),
+                    axios.get('https://relief-net-api.onrender.com/api/admin/incidents/unverified', config),
+                    axios.get('https://relief-net-api.onrender.com/api/admin/resources/unverified', config),
                 ]);
                 setIncidents(incidentsRes.data);
                 setResources(resourcesRes.data);
@@ -101,8 +101,8 @@ export const AdminDashboard = () => {
 
     const handleVerifyIncident = async (id) => {
         try {
-            await axios.put(`http://localhost:3000/api/admin/incidents/${id}/verify`, {}, createAuthHeaders());
-            const promise = axios.put(`http://localhost:3000/api/admin/incidents/${id}/verify`, {}, createAuthHeaders());
+            await axios.put(`https://relief-net-api.onrender.com/api/admin/incidents/${id}/verify`, {}, createAuthHeaders());
+            const promise = axios.put(`https://relief-net-api.onrender.com/api/admin/incidents/${id}/verify`, {}, createAuthHeaders());
             toast.promise(promise, {
                 loading: 'Verifying...',
                 success: 'Incident Verified!',
@@ -116,8 +116,8 @@ export const AdminDashboard = () => {
 
     const handleDismissIncident = async (id) => {
         try {
-            await axios.put(`http://localhost:3000/api/admin/incidents/${id}/dismiss`, {}, createAuthHeaders());
-            const promise = axios.put(`http://localhost:3000/api/admin/incidents/${id}/dismiss`, {}, createAuthHeaders());
+            await axios.put(`https://relief-net-api.onrender.com/api/admin/incidents/${id}/dismiss`, {}, createAuthHeaders());
+            const promise = axios.put(`https://relief-net-api.onrender.com/api/admin/incidents/${id}/dismiss`, {}, createAuthHeaders());
             toast.promise(promise, {
                 loading: 'Dismissing...',
                 success: 'Incident Dismissed!',
@@ -131,8 +131,8 @@ export const AdminDashboard = () => {
 
     const handleVerifyResource = async (id) => {
         try {
-            await axios.put(`http://localhost:3000/api/admin/resources/${id}/verify`, {}, createAuthHeaders());
-            const promise = axios.put(`http://localhost:3000/api/admin/resources/${id}/verify`, {}, createAuthHeaders());
+            await axios.put(`https://relief-net-api.onrender.com/api/admin/resources/${id}/verify`, {}, createAuthHeaders());
+            const promise = axios.put(`https://relief-net-api.onrender.com/api/admin/resources/${id}/verify`, {}, createAuthHeaders());
             toast.promise(promise, {
                 loading: 'Verifying Resource...',    // Message shown while the API call is in progress
                 success: 'Resource Verified!',      // Message shown on successful completion
@@ -146,8 +146,8 @@ export const AdminDashboard = () => {
 
     const handleDismissResource = async (id) => {
         try {
-            await axios.put(`http://localhost:3000/api/admin/resources/${id}/dismiss`, {}, createAuthHeaders());
-             const promise = axios.put(`http://localhost:3000/api/admin/resources/${id}/dismiss`, {}, createAuthHeaders());
+            await axios.put(`https://relief-net-api.onrender.com/api/admin/resources/${id}/dismiss`, {}, createAuthHeaders());
+             const promise = axios.put(`https://relief-net-api.onrender.com/api/admin/resources/${id}/dismiss`, {}, createAuthHeaders());
             toast.promise(promise, {
                 loading: 'Dismissing Resource...',
                 success: 'Resource Dismissed!',
