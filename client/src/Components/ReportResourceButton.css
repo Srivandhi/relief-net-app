@@ -1,0 +1,23 @@
+
+.report-button-resource{
+  position: fixed;
+  bottom: 30px;    
+  left: 50%;       
+  transform: translateX(-50%); 
+  z-index: 9999;   
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #0471ff; 
+  left: calc(50% + 110px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.report-button-resource:hover {
+  background-color: #3343af; 
+}
