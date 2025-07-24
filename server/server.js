@@ -21,7 +21,12 @@ const server = http.createServer(app);
 // Initialize Socket.IO by passing it the main http server
 initSocket(server);
 
-app.use(cors({ origin: "http://localhost:3001" }));
+app.use(cors({
+  origin: ['http://localhost:3001', 'https://relief-net-app.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true 
+}));
+
 
 
 app.use(express.json());
